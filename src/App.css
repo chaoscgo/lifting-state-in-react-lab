@@ -65,15 +65,18 @@ li {
   border-radius: 8px;
   font-weight: bold;
   text-shadow: 0px 0px 2px #000000;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+.ingredient {
+  width: 400px;
+}
+
 button {
   cursor: pointer;
-  border-radius: 8px;
-  background-color: #1a1a1a;
+  border-radius: 4px;
+  background-color: black;
   border: 1px solid transparent;
 }

@@ -27,19 +27,30 @@ const App = () => {
 
   const addToBurger = (ingredient) => {
     const updatedStack = [ingredient, ...stack];
-    console.log(updatedStack);
     setStack(updatedStack);
+  };
+
+  const removeFromBurger = (oldIngredient) => {
+    const newStackArray = stack.findIndex((ingredient) => {
+      return ingredient === oldIngredient;
+    });
+
+    if (newStackArray !== -1) {
+      const newStack = [...stack]
+      newStack.splice(newStackArray, 1)
+      setStack(newStack)
+    }
   };
 
   return (
     <>
-    <main>
-      <h1>Burger Stacker</h1>
-      <section>
-      <IngredientList availableIngredients= {availableIngredients} addToBurger={addToBurger}/>  
-      <BurgerStack />
-      </section>
-    </main>
+      <main>
+        <h1>Burger Stacker</h1>
+        <section>
+          <IngredientList availableIngredients= {availableIngredients} addToBurger={addToBurger}/>  
+          <BurgerStack stack= {stack} removeFromBurger={removeFromBurger}/>
+        </section>
+      </main>
     </>
   );
 };
