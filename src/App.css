@@ -23,7 +23,6 @@ body,
 #root {
   margin: 0;
   height: 100%;
-  overflow-x: hidden;
 }
 
 main {
@@ -71,7 +70,7 @@ li {
 }
 
 .ingredient {
-  width: 400px;
+  width: 700px;
 }
 
 button {
